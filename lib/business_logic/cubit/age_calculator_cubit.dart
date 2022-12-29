@@ -3,7 +3,7 @@ import 'package:bloc/bloc.dart';
 part 'age_calculator_state.dart';
 
 class AgeCalculatorCubit extends Cubit<AgeCalculatorInitial> {
-  AgeCalculatorCubit() : super(AgeCalculatorInitial(stageOfLife: ":)"));
+  AgeCalculatorCubit() : super(AgeCalculatorInitial(stageOfLife: "life"));
 
   void updateAgeVal(int ageval) {
     emit(
@@ -13,19 +13,19 @@ class AgeCalculatorCubit extends Cubit<AgeCalculatorInitial> {
 
   String getStage(int ageval) {
     if (ageval == 0 || ageval == 1) {
-      return "Infant";
+      return "Bebe";
     } else if (ageval >= 2 && ageval <= 4) {
-      return "Toddler";
+      return "Infante";
     } else if (ageval >= 5 && ageval <= 12) {
-      return "Child";
+      return "Niño";
     } else if (ageval >= 13 && ageval <= 19) {
-      return "Teen";
+      return "Adolecente";
     } else if (ageval >= 20 && ageval <= 39) {
-      return "Adult";
+      return "Adulto";
     } else if (ageval >= 40 && ageval <= 59) {
-      return "Middle Age Adult";
+      return "Adulto de mediana edad";
     } else {
-      return "Senior Adult";
+      return "Anciano";
     }
   }
 }

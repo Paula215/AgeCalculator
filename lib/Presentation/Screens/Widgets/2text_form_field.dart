@@ -16,7 +16,7 @@ class InputField extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const Text("Age :"),
+        const Text("Edad :"),
         const WidthSpacer(myWidth: 35),
         SizedBox(
           width: 50,

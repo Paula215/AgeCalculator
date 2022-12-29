@@ -13,7 +13,7 @@ class RouteGenerator {
         return MaterialPageRoute(
           builder: (_) => BlocProvider<AgeCalculatorCubit>(
             create: (context) => AgeCalculatorCubit(),
-            child: const MyHomePage(title: "Age Calculator"),
+            child: const MyHomePage(title: "Calculadora de edad"),
           ),
         );
 

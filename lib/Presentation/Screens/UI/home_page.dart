@@ -39,22 +39,24 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
+        backgroundColor: Color.fromARGB(255, 12, 70, 118),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            const TextData(message: 'Tu eres:'),
             BlocBuilder<AgeCalculatorCubit, AgeCalculatorInitial>(
               builder: (context, state) {
                 return TextData(message: state.stageOfLife);
               },
             ),
-            const HeightSpacer(myHeight: 20),
+            const HeightSpacer(myHeight: 25),
             InputField(
               focusNode: calculateBtnFocusNode,
               ageController: ageController,
             ),
-            const HeightSpacer(myHeight: 10),
+            const HeightSpacer(myHeight: 20),
             ButtonWidget(
               focusNode: calculateBtnFocusNode,
               ageController: ageController,

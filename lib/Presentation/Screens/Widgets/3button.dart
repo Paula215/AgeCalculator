@@ -16,15 +16,17 @@ class ButtonWidget extends StatelessWidget {
     return OutlinedButton.icon(
       focusNode: focusNode,
       style: OutlinedButton.styleFrom(
-        side: const BorderSide(color: Colors.blue, width: 1),
+        side:
+            const BorderSide(color: Color.fromARGB(255, 12, 70, 118), width: 1),
         minimumSize: const Size(175, 50),
       ),
       onPressed: () {
         BlocProvider.of<AgeCalculatorCubit>(context)
             .updateAgeVal(int.parse(ageController.text));
       },
-      icon: const Icon(Icons.flutter_dash),
-      label: const Text('Calculate'),
+      icon:
+          const Icon(Icons.calculate, color: Color.fromARGB(255, 12, 70, 118)),
+      label: const Text('Calcular'),
     );
   }
 }

@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Age Calculator',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        backgroundColor: Color.fromARGB(255, 12, 70, 118),
       ),
       initialRoute: "/",
       onGenerateRoute: RouteGenerator.generateRoute,
